@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../images/header_footer/natin.png" alt="Natin Logo">
+                    <h1>ICT</h1>
+                </div>
+                <nav>
+                    <a href="">Home</a>
+                    <a href="enrollment_info.html">Enrolement Info</a>
+                    <a href="course_info.html">Course Info</a>
+                    <a href="#about_section">About Us</a>
+                </nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-menu">
+        <div class="close-menu" onclick="toggleMenu()">
+        </div>
+        <a href="">Home</a>
+        <a href="enrollment_info.html">Enrolement Info</a>
+        <a href="course_info.html">Course Info</a>
+        <a href="#about_section">About Us</a>
+    </div>
+
+    <div class="hero-content">
+        <div class="hero-container">
+            <div class="text-content">
+                <div class="hero-heading">
+                    <h1 class="welcome-text">WELCOME TO</h1>
+                    <div class="school-name-container">
+                        <h1 class="school-name">NATIN</h1>
+                        <img src="../images/index/hero/ict.png" alt="ICT" class="school-logo">
+                    </div>
+                </div>
+                <p>Transform your passion for technology into a career. Our Information and Communication Technology program provides cutting-edge skills in software development, cybersecurity, and digital innovation.</p>
+                <a href="#" class="enroll-btn">ENROLL NOW</a>
+                <a href="#" class="learn-btn">LEARN MORE</a>
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <span>Call For More Info</span>
+                        <strong>+597 0000 000</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+    <section class="about-us" id="about_section">
+        <h2>About Us</h2>
+        <p>This website was created as a school project to spread awareness and information about the ICT (Information and Communication Technology) course at our school. Our goal is to showcase the exciting opportunities and knowledge that students can gain through this comprehensive program.</p>
+        <p>The ICT course at our school is designed to equip students with the skills and knowledge needed to thrive in the rapidly evolving digital landscape. From programming and web development to data analysis and cybersecurity, our curriculum covers a wide range of topics essential for success in the tech industry.</p>
+        <p>Through this website, we aim to highlight the innovative projects, state-of-the-art facilities, and dedicated faculty that make our ICT program stand out. We believe that by providing detailed information about our course offerings, extracurricular activities, and potential career paths, we can inspire more students to explore the fascinating world of technology.</p>
+        <p>As students ourselves, we've experienced firsthand the transformative power of this program. We're excited to share our journey, insights, and the endless possibilities that await future ICT students. Whether you're a prospective student, a parent, or simply curious about the field of ICT, we hope this website serves as a valuable resource and ignites your passion for technology.</p>
+    </section>
+    
+    <section style="margin-top: 40px;" class="our-team">
+        <h2>Our Team</h2>
+        <div class="team-cards">
+            <div class="card">
+                <img src="../images/index/our_team/dev_chivar.png" alt="Chivar Slijngard">
+                <h3>Chivar Slijngard</h3>
+                <p>Lead Developer</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Denzel Daal">
+                <h3>Denzel Daal</h3>
+                <p>Developer</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Neal Soempeno">
+                <h3>Neal Soempeno</h3>
+                <p>Developer</p>
+            </div>
+            <div class="card">
+                <img src="../images/index/our_team/dev_angela.jpg" alt="Angela Smith">
+                <h3>Angela Smith</h3>
+                <p>Researcher</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../images/header_footer/ict.png" alt="ICT Logo">
+                    <p>NATIN ICT provides world-class education in information and communication technology, preparing students for successful careers in the digital age.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Mr. J. Lachmonstraat 180-182</p>
+                    <p>Paramaribo, Suriname</p>
+                    <p>Email: info@natin.sr</p>
+                    <p>Phone: +597 000 0000</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p>Stay connected with us on social media</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NATIN ICT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+/* homepage styles */
+.hero-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    padding-top: 40px; /* Added to account for fixed header */
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        rgb(255, 255, 255) 0%,
+        rgba(255, 255, 255, 0.9) 50%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    overflow-x: hidden;
+}
+
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/index/hero/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.text-content {
+    max-width: 600px;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.hero-heading {
+    margin-bottom: 2rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-text {
+    font-family: "Dosis", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #505050;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-heading .school-name-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.school-name {
+    font-size: 4rem;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    color: #00b140;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.school-logo {
+    height: 5.2rem;
+    width: auto;
+    object-fit: contain;
+    margin-left: -5px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #636e72;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.9s;
+}
+
+.enroll-btn {
+    font-family: "Exo 2", sans-serif;
+    display: inline-block;
+    background-color: #00b140;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 2px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 1.2s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-btn {
+    font-family: "Exo 2", sans-serif;
+    display: inline-block;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 1rem 2rem;
+    border: 2px solid grey;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 1.5s;
+    transition: transform 0.3s ease;
+}
+
+.enroll-btn:hover, .learn-btn:hover {
+    transform: translateY(-2px);
+}
+
+.enroll-btn:hover {
+    background-color: #037815;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #2d3436;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 1.8s;
+}
+
+.contact-info i {
+    color: #00b140;
+    font-size: 1.2rem;
+}
+
+/* About Us and Our Team Styles */
+.about-us, .our-team {
+max-width: 1200px;
+margin: 20px auto;
+padding: 40px;
+background-color: #ffffff;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-us.fade-in, .our-team.fade-in {
+opacity: 1;
+transform: translateY(0);
+}
+
+h2 {
+text-align: center;
+margin-bottom: 30px;
+color: #00b140;
+font-size: 2.5rem;
+font-weight: 600;
+text-transform: uppercase;
+font-family: "Dosis", sans-serif;
+}
+
+.about-us p {
+margin-bottom: 20px;
+font-size: 1.1rem;
+text-align: left;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-us.fade-in p {
+opacity: 1;
+transform: translateY(0);
+}
+
+.about-us.fade-in p:nth-child(2) { transition-delay: 0.1s; }
+.about-us.fade-in p:nth-child(3) { transition-delay: 0.2s; }
+.about-us.fade-in p:nth-child(4) { transition-delay: 0.3s; }
+.about-us.fade-in p:nth-child(5) { transition-delay: 0.4s; }
+
+.team-cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+}
+
+.card {
+background-color: #ffffff;
+border-radius: 10px;
+padding: 30px;
+text-align: center;
+width: 250px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
+}
+
+.our-team.fade-in .card {
+opacity: 1;
+transform: translateY(0);
+}
+
+.our-team.fade-in .card:nth-child(1) { transition-delay: 0.1s; }
+.our-team.fade-in .card:nth-child(2) { transition-delay: 0.2s; }
+.our-team.fade-in .card:nth-child(3) { transition-delay: 0.3s; }
+.our-team.fade-in .card:nth-child(4) { transition-delay: 0.4s; }
+
+.card img {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 20px;
+}
+
+.card h3 {
+font-size: 1.2rem;
+font-weight: 600;
+color: #2d3436;
+margin-bottom: 10px;
+}
+
+.card p {
+font-size: 1rem;
+color: #636e72;
+}
+
+
+/* Responsive homepage Styles */
+@media (max-width: 1024px) {
+    .hero-content {
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.8) 100%
+        );
+    }
+
+    .hero-content::before {
+        left: 0;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-heading .school-name-container {
+        justify-content: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-heading .welcome-text {
+        font-size: 2.5rem;
+    }
+
+    .hero-heading .school-name {
+        font-size: 3rem;
+    }
+
+    .hero-heading .school-logo {
+        height: 4rem;
+    }
+
+    .about-us, .our-team {
+        padding:  30px;
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .enroll-btn{
+        margin: 0 0 10px 0;
+    }
+
+    .hero-heading .welcome-text {
+        font-size: 2rem;
+    }
+
+    .hero-heading .school-name-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .hero-heading .school-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-heading .school-logo {
+        height: 3.5rem;
+        margin: 0 auto;
+    }
+
+    .about-us, .our-team {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-us p {
+        font-size: 0.9rem;
+    }
+    }
