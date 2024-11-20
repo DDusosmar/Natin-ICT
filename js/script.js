@@ -1,7 +1,7 @@
  //Header script
  
  // Intersection Observer setup
-  const observerOptions = {
+ const observerOptions = {
     root: null,
     rootMargin: '0px',
     threshold: 0.1
@@ -74,6 +74,7 @@ const animateElements = document.querySelectorAll(`
     .enroll-btn, 
     .learn-btn, 
     .contact-info,
+    .enroll-info,
     .about-us,
     .our-team,
     .footer,
