@@ -1,4 +1,179 @@
 /* homepage styles */
+
+/* Popup Form Styles */
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    overflow-y: auto;
+}
+
+/* Style for when popup is open */
+body.popup-open .header {
+    pointer-events: none;
+}
+
+body.popup-open .header * {
+    pointer-events: none;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left; /* Added for left alignment */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    background-color: #00b140;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #037815;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        max-width: 500px;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .popup h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .close-btn {
+        font-size: 28px;
+        right: 15px;
+        top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        width: 90%;
+        max-width: 500px;
+        padding: 12px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+
+    .popup h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        right: 10px;
+        top: 5px;
+    }
+}
 .hero-container {
     max-width: 1300px;
     width: 100%;
@@ -9,7 +184,7 @@
 }
 
 .hero-content {
-    padding-top: 40px; /* Added to account for fixed header */
+    padding-top: 25px; /* Added to account for fixed header */
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -18,7 +193,7 @@
         to right,
         rgb(255, 255, 255) 0%,
         rgba(255, 255, 255, 0.9) 50%,
-        rgba(255, 255, 255, 0.2) 100%
+        rgba(182, 182, 182, 0.7) 100%
     );
     overflow-x: hidden;
 }
@@ -45,6 +220,12 @@
 
 .hero-heading {
     margin-bottom: 2rem;
+ 
+}
+
+.hero-heading h1{
+    margin-bottom: 1rem;
+
 }
 
 @keyframes fadeInUp {
@@ -110,7 +291,7 @@
     display: inline-block;
     background-color: #00b140;
     color: white;
-    padding: 1rem 2rem;
+    padding: 1.08rem 2rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -161,46 +342,54 @@
     font-size: 1.2rem;
 }
 
+.call{
+    font-size: 1rem;
+}
+
 /* About Us and Our Team Styles */
 .about-us, .our-team {
-max-width: 1200px;
-margin: 20px auto;
-padding: 40px;
-background-color: #ffffff;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 1s ease, transform 1s ease;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .about-us.fade-in, .our-team.fade-in {
-opacity: 1;
-transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-h2 {
-text-align: center;
-margin-bottom: 30px;
-color: #00b140;
-font-size: 2.5rem;
-font-weight: 600;
-text-transform: uppercase;
-font-family: "Dosis", sans-serif;
+h2, span {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00b140;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Dosis", sans-serif;
+}
+
+h2{
+    color: #505050;
 }
 
 .about-us p {
-margin-bottom: 20px;
-font-size: 1.1rem;
-text-align: left;
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 1s ease, transform 1s ease;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .about-us.fade-in p {
-opacity: 1;
-transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-us.fade-in p:nth-child(2) { transition-delay: 0.1s; }
@@ -209,28 +398,27 @@ transform: translateY(0);
 .about-us.fade-in p:nth-child(5) { transition-delay: 0.4s; }
 
 .team-cards {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .card {
-background-color: #ffffff;
-border-radius: 10px;
-padding: 30px;
-text-align: center;
-width: 250px;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
 }
 
 .our-team.fade-in .card {
-opacity: 1;
-transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .our-team.fade-in .card:nth-child(1) { transition-delay: 0.1s; }
@@ -239,27 +427,73 @@ transform: translateY(0);
 .our-team.fade-in .card:nth-child(4) { transition-delay: 0.4s; }
 
 .card img {
-width: 150px;
-height: 150px;
-border-radius: 50%;
-object-fit: cover;
-margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .card h3 {
-font-size: 1.2rem;
-font-weight: 600;
-color: #2d3436;
-margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 10px;
 }
 
 .card p {
-font-size: 1rem;
-color: #636e72;
+    font-size: 1rem;
+    color: #636e72;
 }
 
 
-/* Responsive homepage Styles */
+/* Experiences Section Styles */
+.experiences {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding:  1rem 0 2rem;
+}
+
+.experiences__grid {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack cards vertically */
+    gap: 1.5rem; /* Space between cards */
+}
+
+.experiences__card {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width for each card */
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Start with opacity 0 for fade-in effect */
+    transform: translateY(20px); /* Start with a slight downward translation */
+}
+
+.experiences__card-image {
+    margin-right: 1.5rem; /* Space between image and content */
+    width: 150px;
+    height: auto;
+    margin-bottom: auto;
+}
+
+.experiences__card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-in effect */
+.experiences__card.fade-in {
+    opacity: 1; /* Fade in to full opacity */
+    transform: translateY(0); /* Reset translation */
+    transition: opacity 0.5s ease, transform 1.5s ease; /* Smooth transition */
+}
+
+
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .hero-content {
         background: linear-gradient(
@@ -288,9 +522,8 @@ color: #636e72;
 }
 
 @media (max-width: 768px) {
-
     .hero-heading .welcome-text {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .hero-heading .school-name {
@@ -301,12 +534,7 @@ color: #636e72;
         height: 4rem;
     }
 
-    .about-us, .our-team {
-        padding:  30px;
-        margin: 20px;
-    }
-
-    h2 {
+    h2,span {
         font-size: 2rem;
     }
 
@@ -324,15 +552,26 @@ color: #636e72;
         max-width: 300px;
     }
 
+        .experiences__card {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experiences__card-image {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
 }
 
 @media (max-width: 480px) {
-    .enroll-btn{
+    .enroll-btn {
         margin: 0 0 10px 0;
     }
 
     .hero-heading .welcome-text {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-heading .school-name-container {
@@ -341,25 +580,25 @@ color: #636e72;
         gap: 0.5rem;
     }
 
+        .hero-heading h1{
+        margin-bottom: 0rem;
+    }
+
     .hero-heading .school-name {
         font-size: 2.5rem;
     }
 
     .hero-heading .school-logo {
         height: 3.5rem;
-        margin: 0 auto;
+        margin-left: 3px;
     }
 
-    .about-us, .our-team {
-        padding: 20px;
-        margin: 10px;
-    }
 
-    h2 {
+    h2, span {
         font-size: 1.8rem;
     }
 
     .about-us p {
         font-size: 0.9rem;
     }
-    }
+}
