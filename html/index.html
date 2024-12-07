@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Landing Page</title>
+    <title>Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="../images/natin.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
@@ -21,7 +22,7 @@
                 </div>
                 <nav>
                     <a href="">Home</a>
-                    <a href="enrollment_info.html">Enrolement Info</a>
+                    <a href="enrollment_info.html">Enrollment Info</a>
                     <a href="course_info.html">Course Info</a>
                     <a href="#about_section">About Us</a>
                 </nav>
@@ -39,7 +40,7 @@
         <div class="close-menu" onclick="toggleMenu()">
         </div>
         <a href="">Home</a>
-        <a href="enrollment_info.html">Enrolement Info</a>
+        <a href="enrollment_info.html">Enrollment Info</a>
         <a href="course_info.html">Course Info</a>
         <a href="#about_section">About Us</a>
     </div>
@@ -55,13 +56,36 @@
                     </div>
                 </div>
                 <p>Transform your passion for technology into a career. Our Information and Communication Technology program provides cutting-edge skills in software development, cybersecurity, and digital innovation.</p>
-                <a href="#" class="enroll-btn">ENROLL NOW</a>
-                <a href="#" class="learn-btn">LEARN MORE</a>
+                <button class="enroll-btn" id="enrollBtn">ENROLL NOW</button>
+                <a href="course_info.html" class="learn-btn">LEARN MORE</a>
+
+                <!-- Popup Form -->
+                <div id="enrollPopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn">&times;</span>
+                        <h2><span>Enrollment</span> Form</h2>
+                        <form id="enrollForm">
+                            <div class="form-group">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" id="firstName"  placeholder="Enter your First name" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" id="lastName" placeholder="Enter your last name" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea id="description" name="description"  placeholder="Enter your reason for enrolling" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
                 <div class="contact-info">
                     <i class="fas fa-phone-alt"></i>
                     <div>
-                        <span>Call For More Info</span>
-                        <strong>+597 0000 000</strong>
+                        <span class="call">Call For More Info</span>
+                        <strong>+597 490 579</strong>
                     </div>
                 </div>
             </div>
@@ -70,69 +94,109 @@
 
     <main>
     <section class="about-us" id="about_section">
-        <h2>About Us</h2>
+        <h2><span>About</span> Us</h2>
         <p>This website was created as a school project to spread awareness and information about the ICT (Information and Communication Technology) course at our school. Our goal is to showcase the exciting opportunities and knowledge that students can gain through this comprehensive program.</p>
         <p>The ICT course at our school is designed to equip students with the skills and knowledge needed to thrive in the rapidly evolving digital landscape. From programming and web development to data analysis and cybersecurity, our curriculum covers a wide range of topics essential for success in the tech industry.</p>
         <p>Through this website, we aim to highlight the innovative projects, state-of-the-art facilities, and dedicated faculty that make our ICT program stand out. We believe that by providing detailed information about our course offerings, extracurricular activities, and potential career paths, we can inspire more students to explore the fascinating world of technology.</p>
         <p>As students ourselves, we've experienced firsthand the transformative power of this program. We're excited to share our journey, insights, and the endless possibilities that await future ICT students. Whether you're a prospective student, a parent, or simply curious about the field of ICT, we hope this website serves as a valuable resource and ignites your passion for technology.</p>
     </section>
     
-    <section style="margin-top: 40px;" class="our-team">
-        <h2>Our Team</h2>
-        <div class="team-cards">
-            <div class="card">
-                <img src="../images/index/our_team/dev_chivar.png" alt="Chivar Slijngard">
-                <h3>Chivar Slijngard</h3>
-                <p>Lead Developer</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Denzel Daal">
-                <h3>Denzel Daal</h3>
-                <p>Developer</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Neal Soempeno">
-                <h3>Neal Soempeno</h3>
-                <p>Developer</p>
-            </div>
-            <div class="card">
-                <img src="../images/index/our_team/dev_angela.jpg" alt="Angela Smith">
-                <h3>Angela Smith</h3>
-                <p>Researcher</p>
+<section style="margin-top: 40px;" class="our-team">
+<h2><span>Our</span> Team</h2>
+<div class="team-cards">
+    <div class="card">
+        <img src="../images/index/our_team/dev_chivar.png" alt="Chivar Slijngard">
+        <h3>Chivar Slijngard</h3>
+        <p>Lead Developer</p>
+    </div>
+    <div class="card">
+        <img src="../images/index/our_team/dev_denzel.jpg" alt="Denzel Daal">
+        <h3>Denzel Daal</h3>
+        <p>Researcher/Developer</p>
+    </div>
+    <div class="card">
+        <img src="../images/index/our_team/dev_neal.jpg" alt="Neal Soempeno">
+        <h3>Neal Soempeno</h3>
+        <p>Researcher/Developer</p>
+    </div>
+    <div class="card">
+        <img src="../images/index/our_team/dev_angela.jpg" alt="Angela Smith">
+        <h3>Aindjela Smith</h3>
+        <p>Researcher/Developer</p>
+    </div>
+</div>
+</section>
+
+<section style="margin-top: 40px;" class="experiences">
+    <h2 class="section-title"><span>Some</span> Experiences</h2>
+    <div class="experiences__grid">
+        <div class="experiences__card">
+            <img class="experiences__card-image" src="../images/index/experiences/user.jpg" alt="Web Development Intern">
+            <div class="experiences__card-content">
+                <h3 class="experiences__card-name">Juf Raghosing</h3>
+                <p class="experiences__card-description">ICT Teacher</p><br>
+                <p class="experiences__card-description">
+                    Als docent op het Natin zie ik elke dag hoe belangrijk het is om een positieve impact te maken op het leven van je studenten. Een van mijn meest bijzondere momenten was toen een student, die altijd worstelde met zelfvertrouwen, op een dag naar me toe kwam en zei: "Juf, dankzij u durf ik nu wel mijn antwoorden in de klas te delen." Het gaf me zoveel voldoening om te zien hoe hij groeide, niet alleen in zijn leerprestaties, maar ook als persoon.  Het is niet alleen een beroep; het is een taak om jongeren te inspireren, ondersteunen en te zien uitgroeien tot hun beste zelf
+                </p>
             </div>
         </div>
-    </section>
+
+        <div class="experiences__card">
+            <img class="experiences__card-image" src="../images/index/experiences/studentA.jpg" alt="Web Development Intern">
+            <div class="experiences__card-content">
+                <h3 class="experiences__card-name">Shaniqua Helder</h3>
+                <p class="experiences__card-description">ICT Student</p><br>
+                <p class="experiences__card-description">
+                    Mijn naam is Shaniqua Helder, ik ben 17 jaar en zit op de ICT-richting van het Natin-MBO Lachmonstraat. Ik heb voor ICT gekozen omdat ik altijd graag bezig ben geweest met elektronische apparaten, ook al komt ICT in mijn familie niet echt voor. Via mijn zus, die ook op Natin studeerde, hoorde ik dat er een ICT-richting was, en dat trok meteen mijn aandacht. Mijn eerste jaar was heel leerzaam; ik leerde omgaan met computers, kabels, tools en netwerken en ontdekte wat voor soorten apparaten en kabels er allemaal zijn. IT Essentials vond ik het leukst, maar samenwerken met mijn klasgenoten en de vele projecten maakten het extra interessant. Soms was de organisatie van evenementen of projecten wat minder, maar uiteindelijk kwam het toch goed. Nu ik in het tweede jaar zit, bereid ik me voor op mijn stage, wat ik een heel belangrijk deel van de opleiding vind. Het leert je hoe je op de werkvloer moet functioneren en helpt je kennis verder te ontwikkelen.
+                </p>
+            </div>
+        </div>
+
+        <div class="experiences__card">
+            <img class="experiences__card-image" src="../images/index/experiences/studentB.jpg" alt="Web Development Intern">
+            <div class="experiences__card-content">
+                <h3 class="experiences__card-name">Iginho Boldewijn</h3>
+                <p class="experiences__card-description">ICT Graduate</p><br>
+                <p class="experiences__card-description">
+                    Mijn tijd op NATIN was leuk ik heb heel veel kunnen leren  vooral voor het vak  ccna daar heb ik echt over ict kunnenleren vooral bij de topics switch server en vlans systemen , wat ik daarbij vondt ik niets moeilijk   het is gewoon dat je  consistent   moet zijn en geen dagen miss zodat je alles optijd volgt.  Ict is een heel leuke richting waarbij je heelveel kan leren over technische kennis  en je problemen  zelf  kunt oplossen.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</section>
 </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="../images/header_footer/ict.png" alt="ICT Logo">
-                    <p>NATIN ICT provides world-class education in information and communication technology, preparing students for successful careers in the digital age.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>Mr. J. Lachmonstraat 180-182</p>
-                    <p>Paramaribo, Suriname</p>
-                    <p>Email: info@natin.sr</p>
-                    <p>Phone: +597 000 0000</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <p>Stay connected with us on social media</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../images/header_footer/ict.png" alt="ICT Logo">
+                <p>NATIN ICT provides world-class education in information and communication technology, preparing students for successful careers in the digital age.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 NATIN ICT. All rights reserved.</p>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Mr. J. Lachmonstraat 180-182</p>
+                <p>Paramaribo, Suriname</p>
+                <p>Email: info@natin.sr</p>
+                <p>Phone: +597 490 579</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>Stay connected with us on social media</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/natinsuriname/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@Natin-ICT" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NATIN ICT. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
     <script src="../js/script.js"></script>
+
 </body>
 </html>
